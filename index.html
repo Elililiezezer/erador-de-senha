@@ -1,68 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de senha</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Informações sobre peixes de criação comercial, incluindo preços e descrições detalhadas">
+    <title>Peixes de Criação Comercial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #006699;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .card img {
+            width: 150px;
+            height: 100px;
+            border-radius: 8px;
+        }
+        .card-details {
+            max-width: 70%;
+        }
+        .card-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #28a745;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
-
 <body>
-    <section class="conteudo">
-        <div class="conteudo-titulo">
-            <img src="unlock.svg" alt="cadeado fechado">
-            <h2 class="titulo-principal">Gerador de senhas</h2>
-            <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
-        </div>
-        <div class="conteudo-senha">
-            <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha" readonly>
-        </div>
-        <div class="parametro">
-            <h3 class="parametro-titulo">Personalize sua senha</h3>
-            <div class="parametro-coluna__senha">
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
-                    <div class="parametro-senha-botoes">
-                        <button class="parametro-senha__botao">-</button>
-                        <p class="parametro-senha__texto">12</p>
-                        <button class="parametro-senha__botao">+</button>
-                    </div>
-                </div>               
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Características da senha</h4>
-                    <div class="parametro-senha-checkbox">
-                        <input name="maiusculo" type="checkbox" class="checkbox" checked>
-                        <label for="maiusculo">Letras maiúsculas</label>
-                    </div>
-                    <div class="parametro-senha-checkbox">
-                        <input name="minusculo" type="checkbox" class="checkbox">
-                        <label for="minusculo">Letras minúsculas</label>
-                    </div>
-                    <div class="parametro-senha-checkbox">
-                        <input name="numero" type="checkbox" class="checkbox">
-                        <label for="numero">Números</label>
-                    </div>
-                    <div class="parametro-senha-checkbox">
-                        <input name="simbolo" type="checkbox" class="checkbox">
-                        <label for="simbolo">Símbolos</label>
-                    </div>
+    <header>
+        <h1>Peixes de Criação Comercial</h1>
+        <p>Encontre informações detalhadas sobre peixes de criação comercial, incluindo preços e descrições.</p>
+    </header>
+
+    <nav>
+        <a href="#tilapia">Tilápia</a>
+        <a href="#tambaqui">Tambaqui</a>
+        <a href="#carpa">Carpa</a>
+        <a href="#truta">Truta</a>
+    </nav>
+
+    <main>
+        <section id="tilapia">
+            <h2>Tilápia</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Imagem de Tilápia">
+                <div class="card-details">
+                    <h3>Tilápia do Nilo</h3>
+                    <p>A Tilápia do Nilo é um dos peixes mais cultivados em sistemas de aquicultura devido à sua alta resistência e rápido crescimento. É ideal para a produção comercial.</p>
                 </div>
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Força da senha</h4>
-                    <div class="barra"></div>
-                    <div class="forca fraca"></div>
-                    <div class="parametro-senha-textos">
-                        <p>Fraca</p>
-                        <p>Média</p>
-                        <p>Forte</p>
-                    </div>
-                    <p class="entropia"></p>
+                <div class="card-price">
+                    R$ 12,00/kg
                 </div>
             </div>
-        </div>
-    </section>
-    <script src="main.js"></script>
-</body> 
+        </section>
+
+        <section id="tambaqui">
+            <h2>Tambaqui</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Imagem de Tambaqui">
+                <div class="card-details">
+                    <h3>Tambaqui do Amazonas</h3>
+                    <p>O Tambaqui é um peixe de grande porte, popular na região Norte do Brasil. Ideal para a produção em viveiros, apresenta carne saborosa e rica em nutrientes.</p>
+                </div>
+                <div class="card-price">
+                    R$ 18,00/kg
+                </div>
+            </div>
+        </section>
+
+        <section id="carpa">
+            <h2>Carpa</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Imagem de Carpa">
+                <div class="card-details">
+                    <h3>Carpa Comum</h3>
+                    <p>A Carpa Comum é um peixe resistente e de fácil adaptação, frequentemente cultivada em sistemas de aquaponia e em lagos comerciais. Sua carne é muito apreciada na culinária oriental.</p>
+                </div>
+                <div class="card-price">
+                    R$ 10,00/kg
+                </div>
+            </div>
+        </section>
+
+        <section id="truta">
+            <h2>Truta</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Imagem de Truta">
+                <div class="card-details">
+                    <h3>Truta Arco-Íris</h3>
+                    <p>A truta arco-íris é cultivada principalmente em sistemas de água fria e é apreciada por sua carne firme e sabor delicado. É uma das mais valorizadas na piscicultura comercial.</p>
+                </div>
+                <div class="card-price">
+                    R$ 25,00/kg
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Peixes de Criação Comercial | Todos os direitos reservados</p>
+    </footer>
+</body>
 </html>
