@@ -64,6 +64,24 @@
             width: 100%;
             bottom: 0;
         }
+        .search-bar {
+            padding: 10px;
+            width: 50%;
+            margin: 20px auto;
+            display: block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card-container .card {
+            width: 45%;
+            margin: 10px 2.5%;
+        }
     </style>
 </head>
 <body>
@@ -77,68 +95,267 @@
         <a href="#tambaqui">Tambaqui</a>
         <a href="#carpa">Carpa</a>
         <a href="#truta">Truta</a>
+        <a href="#outros">Outros Peixes</a>
     </nav>
 
+    <!-- Barra de pesquisa -->
+    <input type="text" id="searchInput" class="search-bar" onkeyup="searchPeixes()" placeholder="Pesquisar por peixe...">
+
     <main>
-        <section id="tilapia">
-            <h2>Tilápia</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Imagem de Tilápia">
-                <div class="card-details">
-                    <h3>Tilápia do Nilo</h3>
-                    <p>A Tilápia do Nilo é um dos peixes mais cultivados em sistemas de aquicultura devido à sua alta resistência e rápido crescimento. É ideal para a produção comercial.</p>
+        <div id="peixesContainer" class="card-container">
+            <!-- Seção com peixes -->
+            <section id="tilapia">
+                <h2>Tilápia</h2>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Tilápia">
+                    <div class="card-details">
+                        <h3>Tilápia do Nilo</h3>
+                        <p>A Tilápia do Nilo é um dos peixes mais cultivados em sistemas de aquicultura devido à sua alta resistência e rápido crescimento. É ideal para a produção comercial.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 12,00/kg
+                    </div>
                 </div>
-                <div class="card-price">
-                    R$ 12,00/kg
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="tambaqui">
-            <h2>Tambaqui</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Imagem de Tambaqui">
-                <div class="card-details">
-                    <h3>Tambaqui do Amazonas</h3>
-                    <p>O Tambaqui é um peixe de grande porte, popular na região Norte do Brasil. Ideal para a produção em viveiros, apresenta carne saborosa e rica em nutrientes.</p>
+            <section id="tambaqui">
+                <h2>Tambaqui</h2>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Tambaqui">
+                    <div class="card-details">
+                        <h3>Tambaqui do Amazonas</h3>
+                        <p>O Tambaqui é um peixe de grande porte, popular na região Norte do Brasil. Ideal para a produção em viveiros, apresenta carne saborosa e rica em nutrientes.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 18,00/kg
+                    </div>
                 </div>
-                <div class="card-price">
-                    R$ 18,00/kg
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="carpa">
-            <h2>Carpa</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Imagem de Carpa">
-                <div class="card-details">
-                    <h3>Carpa Comum</h3>
-                    <p>A Carpa Comum é um peixe resistente e de fácil adaptação, frequentemente cultivada em sistemas de aquaponia e em lagos comerciais. Sua carne é muito apreciada na culinária oriental.</p>
+            <section id="carpa">
+                <h2>Carpa</h2>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Carpa">
+                    <div class="card-details">
+                        <h3>Carpa Comum</h3>
+                        <p>A Carpa Comum é um peixe resistente e de fácil adaptação, frequentemente cultivada em sistemas de aquaponia e em lagos comerciais. Sua carne é muito apreciada na culinária oriental.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 10,00/kg
+                    </div>
                 </div>
-                <div class="card-price">
-                    R$ 10,00/kg
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="truta">
-            <h2>Truta</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Imagem de Truta">
-                <div class="card-details">
-                    <h3>Truta Arco-Íris</h3>
-                    <p>A truta arco-íris é cultivada principalmente em sistemas de água fria e é apreciada por sua carne firme e sabor delicado. É uma das mais valorizadas na piscicultura comercial.</p>
+            <section id="truta">
+                <h2>Truta</h2>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Truta">
+                    <div class="card-details">
+                        <h3>Truta Arco-Íris</h3>
+                        <p>A truta arco-íris é cultivada principalmente em sistemas de água fria e é apreciada por sua carne firme e sabor delicado. É uma das mais valorizadas na piscicultura comercial.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 25,00/kg
+                    </div>
                 </div>
-                <div class="card-price">
-                    R$ 25,00/kg
+            </section>
+
+            <!-- Seção com mais peixes -->
+            <section id="outros">
+                <h2>Outros Peixes</h2>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 1</h3>
+                        <p>Descrição do Peixe 1.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 15,00/kg
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 2</h3>
+                        <p>Descrição do Peixe 2.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 20,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 3</h3>
+                        <p>Descrição do Peixe 3.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 14,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 4</h3>
+                        <p>Descrição do Peixe 4.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 18,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 5</h3>
+                        <p>Descrição do Peixe 5.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 22,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 6</h3>
+                        <p>Descrição do Peixe 6.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 16,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 7</h3>
+                        <p>Descrição do Peixe 7.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 17,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 8</h3>
+                        <p>Descrição do Peixe 8.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 19,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 9</h3>
+                        <p>Descrição do Peixe 9.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 21,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 10</h3>
+                        <p>Descrição do Peixe 10.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 23,00/kg
+                    </div>
+                </div>
+
+                <!-- Continue adicionando até 20 peixes -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 11</h3>
+                        <p>Descrição do Peixe 11.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 24,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 12</h3>
+                        <p>Descrição do Peixe 12.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 26,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 13</h3>
+                        <p>Descrição do Peixe 13.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 27,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 14</h3>
+                        <p>Descrição do Peixe 14.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 28,00/kg
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Imagem de Peixe">
+                    <div class="card-details">
+                        <h3>Peixe 15</h3>
+                        <p>Descrição do Peixe 15.</p>
+                    </div>
+                    <div class="card-price">
+                        R$ 29,00/kg
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Peixes de Criação Comercial | Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        // Função de pesquisa
+        function searchPeixes() {
+            var input, filter, container, cards, title, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            container = document.getElementById('peixesContainer');
+            cards = container.getElementsByClassName('card');
+
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].getElementsByClassName("card-details")[0].getElementsByTagName("h3")[0];
+                txtValue = title.textContent || title.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
